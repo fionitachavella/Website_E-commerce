@@ -1,0 +1,314 @@
+.cartitems {
+    margin: 100px 170px;
+}
+
+.cartitems hr {
+    height: 3px;
+    background: #e2e2e2;
+    border: 0;
+}
+
+.cartitems-format-main {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    align-items: center;
+    gap: 75px;
+    padding: 20px 0px;
+    color: #454545;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.cartitems-format {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.carticon-product-icon {
+    height: 62px;
+}
+
+.cartitems-remove-icon {
+    width: 15px;
+    margin: 6px 40px;
+    cursor: pointer;
+}
+
+.cartitems-quantity {
+    width: 64px;
+    height: 50px;
+    border: 2px solid #ebebeb;
+    background: #fff;
+}
+
+.cartitems-down {
+    display: flex;
+    margin: 100px 0px;
+}
+
+.cartitems-total {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-right: 200px;
+    gap: 40px;
+}
+
+.cartitems-total-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0px;
+}
+
+.cartitems-total button {
+    width: 262px;
+    height: 58px;
+    outline: none;
+    border: none;
+    background: #ff5a5a;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cartitems-promocode {
+    flex: 1;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.cartitems-promocode p {
+    color: #555;
+}
+
+.cartitems-promobox {
+    width: 504px;
+    margin-top: 15px;
+    padding-left: 20px;
+    height: 58px;
+    background: #eaeaea;
+}
+
+.cartitems-promobox input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    width: 330px;
+    height: 50px;
+}
+
+.cartitems-promobox button {
+    width: 170px;
+    height: 58px;
+    font-size: 16px;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+/* Pop-up styles */
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* CartItems.css */
+
+.popup-inner {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    max-width: 90%; /* Menyesuaikan lebar maksimum untuk responsif */
+}
+
+.popup-inner h2 {
+    margin-bottom: 20px;
+    color: #333; /* Warna teks judul */
+    font-size: 20px; /* Ukuran font judul */
+    text-align: center; /* Pusatkan judul */
+}
+
+.selected-products {
+    margin-bottom: 20px;
+}
+
+.selected-products table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.selected-products th,
+.selected-products td {
+    border: 1px solid #e2e2e2;
+    padding: 8px;
+    text-align: left;
+}
+
+.selected-products th {
+    background-color: #f2f2f2; /* Warna latar belakang header kolom */
+    color: #555; /* Warna teks header kolom */
+    font-size: 16px; /* Ukuran font header kolom */
+}
+
+.selected-products td {
+    font-size: 16px; /* Ukuran font sel di tabel */
+}
+
+.selected-products .product-name {
+    font-weight: bold; /* Tebal teks nama produk */
+}
+
+.popup-inner form {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-inner input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.popup-inner button {
+    margin-top: 10px;
+    padding: 12px;
+    border: none;
+    background-color: #ff5a5a;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cartitems-size-dropdown {
+    width: 64px;
+    height: 50px;
+    border: 2px solid #ebebeb;
+    background: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+}
+@media (max-width: 1200px) {
+    .cartitems {
+        margin: 50px 100px;
+    }
+
+    .cartitems-format-main {
+        gap: 20px;
+        font-size: 16px;
+    }
+
+    .cartitems-quantity, .cartitems-size-dropdown {
+       width: 50px;
+       height: 20px;
+    }
+
+    .cartitems-total {
+        margin-right: 100px;
+    }
+
+    .cartitems-total button {
+        width: 200px;
+        height: 50px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cartitems {
+        margin: 30px 50px;
+    }
+
+    .cartitems-format-main {
+        display: grid;
+        text-align: center;
+        font-size: 12px;
+        gap: 2px;
+    }
+
+    .cartitems-format-main p, .cartitems-format-main img, .cartitems-format-main select, .cartitems-format-main button {
+        display: flex;
+        margin: 10px auto;
+        font-size: 10PX;
+    }
+
+    .cartitems-quantity, .cartitems-size-dropdown {
+       display: block;
+        width: 50px;
+        height: 20px;
+    }
+
+    .cartitems-total {
+        margin: 0 auto;
+    }
+
+    .cartitems-total button {
+        width: 180px;
+        height: 45px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 500px) {
+    .cartitems {
+        margin: 20px 20px;
+       
+        
+    }
+
+    .cartitems-format-main {
+        gap: 20px;
+        font-size: 12px;
+        
+    }
+
+    .cartitems-quantity{
+        width: 30px;
+        height: 25px;
+    }
+    .cartitems-size-dropdown {
+        width: 50px;
+        height: 20px;
+    }
+
+    .cartitems-total {
+        margin: 0 auto;
+    }
+
+    .cartitems-total button {
+        width: 150px;
+        height: 40px;
+        font-size: 12px;
+    }
+
+    .popup-inner {
+        width: 90%; /* Menyesuaikan lebar maksimum untuk perangkat seluler */
+    }
+}
+
+
+
+
+
+
+
+
+
+
