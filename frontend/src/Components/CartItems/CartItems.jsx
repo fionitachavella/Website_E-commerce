@@ -49,7 +49,7 @@ const CartItems = () => {
 
     const openWhatsApp = () => {
         // Nomor WhatsApp penerima (ganti dengan nomor yang sesuai)
-        const phoneNumber = '6285712188760'; // Misalnya nomor Indonesia dengan kode 62
+        const phoneNumber = '6285797975167'; // Misalnya nomor Indonesia dengan kode 62
 
         // Data yang ingin Anda kirim sebagai pesan
         const message = encodeURIComponent(
@@ -69,7 +69,7 @@ const CartItems = () => {
         );
 
         // Bentuk URL untuk WhatsApp
-        const whatsappUrl = `https://wa.me/6285712188760?text=${message}`;
+        const whatsappUrl = `https://wa.me/6285797975167?text=${message}`;
 
         // Buka URL menggunakan window.open()
         window.open(whatsappUrl, '_blank');
@@ -90,7 +90,7 @@ const CartItems = () => {
 
         console.log('Data yang akan dikirim:', checkoutData);  // Periksa data di console
 
-        axios.post('http://localhost:4000/checkout', formData)
+        axios.post('http://54.172.100.247:3000/checkout', formData)
             .then(response => {
                 console.log(response.data);
                 // Reset form atau tutup popup setelah pengiriman berhasil
