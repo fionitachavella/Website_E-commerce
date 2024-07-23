@@ -8,7 +8,7 @@ const NewsLetter = () => {
 
   const handleSubmit = async () => {
     try {
-      const response = await axios.post('http://localhost:4000/api/subscribers', { email });
+      const response = await axios.post('http://54.172.100.247:3000/api/subscribers', { email });
       setMessage(response.data.message);
     } catch (error) {
       setMessage('Error subscribing. Please try again.');
