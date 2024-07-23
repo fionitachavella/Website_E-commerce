@@ -15,12 +15,12 @@ const ShopContextProvider = (props) => {
     const [cartItems, setCartItems] = useState(getDefaultCart());
 
     useEffect(() => {
-        fetch('http://localhost:4000/allproducts')
+        fetch('http://54.172.100.247:3000/allproducts')
             .then((response) => response.json())
             .then((data) => setAll_Product(data));
 
         if (localStorage.getItem('auth-token')) {
-            fetch('http://localhost:4000/getcart', {
+            fetch('http://54.172.100.247:3000/getcart', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/form-data',
@@ -37,7 +37,7 @@ const ShopContextProvider = (props) => {
     const addToCart = (itemId, size) => {
         setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1, size: size }));
         if (localStorage.getItem('auth-token')) {
-            fetch('http://localhost:4000/addtocart', {
+            fetch('http://54.172.100.247:3000/addtocart', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/form-data',
@@ -54,7 +54,7 @@ const ShopContextProvider = (props) => {
     const removeFromCart = (itemId) => {
         setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1, size: prev[itemId].size }));
         if (localStorage.getItem('auth-token')) {
-            fetch('http://localhost:4000/removefromcart', {
+            fetch('http://54.172.100.247:3000/removefromcart', {
                 method: 'POST',
                 headers: {
                     Accept: 'application/form-data',
@@ -92,7 +92,7 @@ const ShopContextProvider = (props) => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await fetch('http://localhost:4000/allproducts');
+                const response = await fetch('http://54.172.100.247:3000/allproducts');
                 if (!response.ok) {
                     throw new Error('Failed to fetch products');
                 }
