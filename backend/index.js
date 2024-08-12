@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 
 // Database Connection with MongoDB
 const uri = 'mongodb://localhost:4000/cart';
-mongoose.connect("mongodb+srv://clarneed:180303@cluster0.0vil89i.mongodb.net/e-commerce");
+mongoose.connect("mongodb+srv://password.mongodb.net/e-commerce");
 
 const connection = mongoose.connection;
 connection.once('open', () => {
